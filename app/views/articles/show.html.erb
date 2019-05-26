@@ -1,0 +1,10 @@
+<% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+ <% end %>
+
+<h1><%= @article.title %></h1>
+<p><%= @article.text %></p>
+<%= link_to 'back', articles_path, class: "back" %>
+<%= link_to 'edit', edit_article_path, class: "edit_#{@article.id}" %>
